@@ -1,0 +1,147 @@
+/* PC、スマホ共通スタイル */
+* {
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 15px;
+}
+
+body {
+    max-width: 1080px;
+    margin: 0 auto 0 auto;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ナビゲーションのレイアウト */
+#nav-pc {
+    font-size: 14px;
+}
+  
+#nav-pc ul {
+    display: flex;
+    padding-left: 0;
+}
+  
+#nav-pc li {
+    list-style: none;
+}
+  
+/* ナビゲーションのリンクの装飾設定 */
+#nav-pc a {
+    text-decoration: none;
+    margin-left: 20px;
+    color: #0d0d0d;
+}
+  
+#nav-pc a:hover {
+    text-decoration: underline;
+}
+
+/*====================
+スマートフォン用のスタイル
+=====================*/
+@media screen and (max-width: 767px) {
+    /* PC用ナビゲーション非表示 */
+    #nav-pc {
+        display: none;
+    }
+  
+    /* ハンバーガーメニュー */
+    #menu-sp {
+      float: right;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+    }
+  
+    /* スマホ用ナビゲーションの表示切替*/
+    /* 初期状態、レイアウトと非表示設定 */
+    #nav-sp {
+      background-color: #ce933e;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: none;
+      z-index: 100;
+    }
+
+    /* ×ボタン */
+    #close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    #nav-sp nav ul {
+        padding-left: 0;
+    }
+    
+    #nav-sp nav li {
+        list-style: none;
+    }
+    
+    /* ナビゲーションメニュー用ロゴ */
+    #logo-sp {
+        margin: 80px 0 30px 20px;
+    } 
+
+    /* ナビゲーションのリンクの装飾設定 */
+    #nav-sp nav a {
+        display: block;
+        color: #ffffff;
+    }
+ 
+    #nav-sp nav a:hover {
+        text-decoration: underline;
+    }
+ 
+    #nav-sp nav a:active {
+        color: #ffffff;
+    }
+
+    #nav-sp .menu {
+        text-decoration: none;
+        display: block;
+        margin: 0 20px 0 20px;
+        height: 44px;
+        font-size: 16px;
+        background-image: url("images/arrow.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+}
+
+/*====================
+PC用のスタイル
+=====================*/
+@media screen and (min-width: 767px) {
+    /* SP用ナビゲーション非表示 */
+    #menu-sp {
+        display: none;
+    }
+    #nav-sp {
+        display: none;
+    }
+}
+
+/* メインビジュアル*/
+#main-visual > img {
+    width: 100%;
+}
+
+#main-message > h1 {
+    font-family: "Arial", "メイリオ";
+}
+#main-message > p { 
+    font-family: "Arial", "メイリオ";
+}
